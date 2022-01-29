@@ -1,35 +1,44 @@
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css"
+      integrity="sha512-JApjWRnfonFeGBY7t4yq8SWr1A6xVYEJgO/UMIYONxaR3C9GETKUg0LharbJncEzJF5Nmiv+Pr5QNulr81LjGQ=="
+      crossorigin="anonymous"
+    />
 
+  </head>
   <body>
-    <main class="container">
-      <div>
-        <input />
-        <button class="btn search">Search</button>
-      </div>
-      <h1 class="error-msg">Something went wrong</h1>
-      <h1 class="countries-title">Countries</h1>
-      <div class="countries">
-        <!-- <div class="country">
-          <img class="country__img" src="" />
-          <div class="country__data">
-            <h3 class="country__name">COUNTRY</h3>
-            <h4 class="country__region">REGION</h4>
-            <p class="country__row"><span>👫</span>POP people</p>
-            <p class="country__row"><span>🗣️</span>LANG</p>
-            <p class="country__row"><span>💰</span>CUR</p>
-          </div>
-        </div> -->
-      </div>
-      <h1 class="neighbors-title">Neighbors</h1>
-      <div class="neighbors"></div>
-      <div class="images"></div>
-      <script src="script.js"></script>
+    <header>
+      <nav class="nav-bar">
+        <img class = "logo" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"/>
+
+        <div class = "home-button focus-list"> HOME </div>
+        <div class = "like-list-button unfocus-list"> LIKED LIST </div>
+      </nav>
+    </header>
+
+    <main>
+      <select class="page-type">
+        <option value="popular">Popular</option>
+        <option value="now_playing">Now Playing</option>
+        <option value="top_rated">Top Rated</option>
+        <option value="upcoming">Upcoming</option>
+      </select>
+      <section class="page-nav"> 
+        <button class = "prev">prev</button>
+        <span id = "current-page"></span>
+        <button class = "next">Next</button>  
+      </section>
+
+      <section class = "disp-container home-container"></section>
+      <section class = "disp-container liked-container hidden"></section>
+      <section class="detail-container hidden"></section>
     </main>
+ 
+    
+    <script src="script.js"></script>
   </body>
 </html>
